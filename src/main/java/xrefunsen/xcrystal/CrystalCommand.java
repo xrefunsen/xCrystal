@@ -1,4 +1,4 @@
-package xrefunsen.xcustomcrystal;
+package xrefunsen.xcrystal;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -8,9 +8,9 @@ import org.bukkit.inventory.ItemStack;
 
 public final class CrystalCommand implements CommandExecutor {
 
-    private final XCustomCrystalPlugin plugin;
+    private final XCrystalPlugin plugin;
 
-    public CrystalCommand(XCustomCrystalPlugin plugin) {
+    public CrystalCommand(XCrystalPlugin plugin) {
         this.plugin = plugin;
     }
 
@@ -21,7 +21,7 @@ public final class CrystalCommand implements CommandExecutor {
             sender.sendMessage(lang.message("only_players"));
             return true;
         }
-        if (!player.hasPermission("xcustomcrystal.admin")) {
+        if (!player.hasPermission("xcrystal.admin")) {
             player.sendMessage(lang.message("no_permission"));
             return true;
         }

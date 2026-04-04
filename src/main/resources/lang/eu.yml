@@ -1,7 +1,7 @@
 messages:
   only_players: "§cOnly players can use this command."
   no_permission: "§cYou don't have permission to use this command."
-  cmd_header: "§6=== xCustomCrystal Commands ==="
+  cmd_header: "§6=== xCrystal Commands ==="
   cmd_line_get: "§e/kristal <crystal_id> §7- Get the specified crystal"
   cmd_example: "§eExample: §7/kristal guc_kristali"
   random_added: "§dRandom Crystal §7added to your inventory!"
@@ -27,8 +27,8 @@ messages:
   crystal_used: "{display} §7used!"
   craft_diamond: "§cEach Diamond Block slot must have at least 12 items!"
   craft_netherite: "§cEach Netherite Ingot slot must have at least 3 items!"
-  enabled: "xCustomCrystal enabled."
-  disabled: "xCustomCrystal disabled."
+  enabled: "xCrystal enabled."
+  disabled: "xCrystal disabled."
 
 item:
   effects_label: "§7Effects:"

@@ -1,4 +1,4 @@
-package xrefunsen.xcustomcrystal;
+package xrefunsen.xcrystal;
 
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -11,7 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.Arrays;
 import java.util.Locale;
 
-public final class XCustomCrystalPlugin extends JavaPlugin {
+public final class XCrystalPlugin extends JavaPlugin {
 
     private CrystalManager crystalManager;
     private Lang lang;

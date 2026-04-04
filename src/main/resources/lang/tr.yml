@@ -1,7 +1,7 @@
 messages:
   only_players: "§cBu komutu yalnızca oyuncular kullanabilir."
   no_permission: "§cBu komutu kullanma iznin yok."
-  cmd_header: "§6=== xCustomCrystal Komutları ==="
+  cmd_header: "§6=== xCrystal Komutları ==="
   cmd_line_get: "§e/kristal <kristal_id> §7- Belirtilen kristali al"
   cmd_example: "§eÖrnek: §7/kristal guc_kristali"
   random_added: "§dRastgele Kristal §7envanterine eklendi!"
@@ -27,8 +27,8 @@ messages:
   crystal_used: "{display} §7kullanıldı!"
   craft_diamond: "§cHer Elmas Blok yuvasında en az 12 eşya olmalı!"
   craft_netherite: "§cHer Netherite Külçe yuvasında en az 3 eşya olmalı!"
-  enabled: "xCustomCrystal etkin."
-  disabled: "xCustomCrystal devre dışı."
+  enabled: "xCrystal etkin."
+  disabled: "xCrystal devre dışı."
 
 item:
   effects_label: "§7Etkiler:"

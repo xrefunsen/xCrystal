@@ -1,4 +1,4 @@
-package xrefunsen.xcustomcrystal;
+package xrefunsen.xcrystal;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;

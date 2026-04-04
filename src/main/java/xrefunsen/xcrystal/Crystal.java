@@ -1,4 +1,4 @@
-package xrefunsen.xcustomcrystal;
+package xrefunsen.xcrystal;
 
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -18,11 +18,11 @@ public final class Crystal {
     private final List<String> lore;
     private final int cooldown;
     private final List<String> effects;
-    private final XCustomCrystalPlugin plugin;
+    private final XCrystalPlugin plugin;
     private final Lang lang;
 
     public Crystal(String id, String displayName, Material material, List<String> lore, int cooldown, List<String> effects,
-                   XCustomCrystalPlugin plugin, Lang lang) {
+                   XCrystalPlugin plugin, Lang lang) {
         this.id = id;
         this.displayName = displayName;
         this.material = material;

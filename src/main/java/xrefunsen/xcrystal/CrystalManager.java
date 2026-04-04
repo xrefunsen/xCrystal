@@ -1,4 +1,4 @@
-package xrefunsen.xcustomcrystal;
+package xrefunsen.xcrystal;
 
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
@@ -11,9 +11,9 @@ import java.util.Map;
 public final class CrystalManager {
 
     private final Map<String, Crystal> crystals = new HashMap<>();
-    private final XCustomCrystalPlugin plugin;
+    private final XCrystalPlugin plugin;
 
-    public CrystalManager(XCustomCrystalPlugin plugin) {
+    public CrystalManager(XCrystalPlugin plugin) {
         this.plugin = plugin;
     }
 

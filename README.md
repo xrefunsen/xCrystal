@@ -1,15 +1,15 @@
-# xCustomCrystal
+# xCrystal
 
 ![Paper](https://img.shields.io/badge/Paper-1.21-004080?style=flat)
 ![Java](https://img.shields.io/badge/Java-17+-e58916?style=flat)
 
-**xCustomCrystal** is a **Paper 1.21** plugin by **[xrefunsen](https://github.com/xrefunsen)**. It adds **Echo Shard** “crystal” items you can **craft** or **give with commands**. Each crystal has a fixed **id**, styled **name/lore**, a **30s cooldown** per player per type, and a **right-click** power (buffs, AoE debuffs, lightning, teleport, silence, mirror reflect, mining burst, fireball, mob morph, and more).
+**xCrystal** is a **Paper 1.21** plugin by **[xrefunsen](https://github.com/xrefunsen)**. It adds **Echo Shard** “crystal” items you can **craft** or **give with commands**. Each crystal has a fixed **id**, styled **name/lore**, a **30s cooldown** per player per type, and a **right-click** power (buffs, AoE debuffs, lightning, teleport, silence, mirror reflect, mining burst, fireball, mob morph, and more).
 
-**In-game language** comes from **`lang/tr.yml`** or **`lang/eu.yml`** (English UI strings), chosen with **`language`** in **`plugins/xCustomCrystal/config.yml`**.
+**In-game language** comes from **`lang/tr.yml`** or **`lang/eu.yml`** (English UI strings), chosen with **`language`** in **`plugins/xCrystal/config.yml`**.
 
 **Random Crystal** is crafted as a **Nether Star** item: **right-click** consumes it and rolls **one** random crystal from all registered ids. Item data uses **`crystal_id`** on normal crystals and **`is_random_crystal`** on the random item (Paper **PersistentDataContainer**).
 
-**Repository:** [github.com/xrefunsen/xCrystal](https://github.com/xrefunsen/xCrystal) · **Main class:** `xrefunsen.xcustomcrystal.XCustomCrystalPlugin`
+**Repository:** [github.com/xrefunsen/xCrystal](https://github.com/xrefunsen/xCrystal) · **Main class:** `xrefunsen.xcrystal.XCrystalPlugin`
 
 ---
 
@@ -29,13 +29,13 @@
 mvn -B package
 ```
 
-Artifact: **`target/xCustomCrystal.jar`**
+Artifact: **`target/xCrystal.jar`**
 
 ## Installation
 
 1. Build with Maven or use a released jar.
-2. Put **`xCustomCrystal.jar`** in the server **`plugins`** folder.
-3. Start the server once to create **`plugins/xCustomCrystal/`**.
+2. Put **`xCrystal.jar`** in the server **`plugins`** folder.
+3. Start the server once to create **`plugins/xCrystal/`**.
 4. Set **`language`** to **`tr`** or **`eu`** in **`config.yml`** (`eu` = English messages).
 5. Restart the server (or reload only if you know it is safe for your setup).
 
@@ -109,13 +109,13 @@ gunes_kristali         ay_kristali
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `xcustomcrystal.admin` | Use **`/kristal`** | `op` |
+| `xcrystal.admin` | Use **`/kristal`** | `op` |
 
 ---
 
 ## Türkçe
 
-**xCustomCrystal**, **xrefunsen**’ın **Paper 1.21** için geliştirdiği bir eklentidir. **Yankı Parçası** görünümlü **kristal** eşyaları ekler; bunlar **üretim masasında** yapılabilir veya **`/kristal`** ile verilebilir. Her kristalin sabit **id**’si, renkli **isim/lore**’u, oyuncu + kristal türü başına **30 saniye** bekleme süresi ve **sağ tık** ile çalışan özel bir gücü vardır (iksirler, alan etkileri, yıldırım, ışınlanma, sessizlik, ayna, madenci patlaması, ateş topu, canavar dönüşümü vb.).
+**xCrystal**, **xrefunsen**’ın **Paper 1.21** için geliştirdiği bir eklentidir. **Yankı Parçası** görünümlü **kristal** eşyaları ekler; bunlar **üretim masasında** yapılabilir veya **`/kristal`** ile verilebilir. Her kristalin sabit **id**’si, renkli **isim/lore**’u, oyuncu + kristal türü başına **30 saniye** bekleme süresi ve **sağ tık** ile çalışan özel bir gücü vardır (iksirler, alan etkileri, yıldırım, ışınlanma, sessizlik, ayna, madenci patlaması, ateş topu, canavar dönüşümü vb.).
 
 **Oyun içi metinler** **`config.yml`** içindeki **`language`** ile **`tr`** veya **`eu`** (İngilizce arayüz metinleri) seçilir; dosyalar **`lang/tr.yml`** ve **`lang/eu.yml`**.
 
@@ -131,8 +131,8 @@ Java **17+**, **Paper 1.21**, kaynak derlemek için **Maven 3.6+**.
 mvn -B package
 ```
 
-1. **`target/xCustomCrystal.jar`** dosyasını sunucunun **`plugins`** klasörüne atın.  
-2. Sunucuyu bir kez çalıştırın, **`plugins/xCustomCrystal/config.yml`** içinde **`language`** değerini **`tr`** veya **`eu`** yapın.  
+1. **`target/xCrystal.jar`** dosyasını sunucunun **`plugins`** klasörüne atın.  
+2. Sunucuyu bir kez çalıştırın, **`plugins/xCrystal/config.yml`** içinde **`language`** değerini **`tr`** veya **`eu`** yapın.  
 3. Sunucuyu yeniden başlatın.
 
 ### Rastgele Kristal (üretim özeti)
@@ -149,7 +149,7 @@ Aynı **3×3** şema: köşeler ve orta yanlar **N** = Netherite Külçe, kenar 
 
 | İzin | Açıklama | Varsayılan |
 | --- | --- | --- |
-| `xcustomcrystal.admin` | `/kristal` kullanımı | `op` |
+| `xcrystal.admin` | `/kristal` kullanımı | `op` |
 
 **Kristal id listesi** yukarıdaki İngilizce bölümdeki blok ile aynıdır.
 

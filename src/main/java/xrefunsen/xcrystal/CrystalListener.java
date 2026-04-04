@@ -1,4 +1,4 @@
-package xrefunsen.xcustomcrystal;
+package xrefunsen.xcrystal;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -7,7 +7,6 @@ import org.bukkit.Particle;
 import org.bukkit.Sound;
 import org.bukkit.block.Block;
 import org.bukkit.block.BlockFace;
-import org.bukkit.entity.Animals;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Fireball;
@@ -49,7 +48,7 @@ public final class CrystalListener implements Listener {
     private static final int MEDIUM_TICKS = 300;
     private static final int LONG_TICKS = 400;
 
-    private final XCustomCrystalPlugin plugin;
+    private final XCrystalPlugin plugin;
     private final Map<String, Long> cooldowns = new HashMap<>();
     private final Map<UUID, Long> mirrorCooldowns = new HashMap<>();
     private final Map<UUID, Long> silenceCooldowns = new HashMap<>();
@@ -59,7 +58,7 @@ public final class CrystalListener implements Listener {
     private final List<EntityType> passiveMobs;
     private final Set<Material> minerBlocks;
 
-    public CrystalListener(XCustomCrystalPlugin plugin) {
+    public CrystalListener(XCrystalPlugin plugin) {
         this.plugin = plugin;
         this.goodEffects = Arrays.asList(
                 PotionEffectType.SPEED, PotionEffectType.STRENGTH, PotionEffectType.REGENERATION,
