@@ -1,6 +1,6 @@
 # xCustomCrystal
 
-**xCustomCrystal** is a Paper **1.21** plugin by **xrefunsen** that adds craftable and command-givable **Echo Shard** items (“crystals”). Each crystal has a stable id, colored name and lore, a **30 second** cooldown per player per crystal type, and a **right-click** ability: self buffs, area debuffs, lightning, short teleport, silence aura, mirror damage reflection, miner blast, fireball, mob morph, and more. Messages and item text come from **`lang/tr.yml`** (Turkish) or **`lang/eu.yml`** (English), selected with **`language`** in **`config.yml`**.
+**xCustomCrystal** is a Paper **1.21** plugin by **xrefunsen** that adds craftable and command-givable **Echo Shard** items (“crystals”). Each crystal has a stable id, colored name and lore, a **30 second** cooldown per player per crystal type, and a **right-click** ability: self buffs, area debuffs, lightning, short teleport, silence aura, mirror damage reflection, miner blast, fireball, mob morph, and more. Messages and item text load from **`lang/tr.yml`** or **`lang/eu.yml`**, selected with **`language`** in **`config.yml`**.
 
 **Random Crystal** is a separate **Nether Star** item: right-click consumes it and grants one random normal crystal. Crystals store their id in **PersistentDataContainer** (`crystal_id`); the random item uses `is_random_crystal`.
 
@@ -32,7 +32,7 @@ Output: **`target/xCustomCrystal.jar`**
 
 | Key | Values | Description |
 | --- | --- | --- |
-| `language` | `tr`, `eu` | Chat and item strings (`eu` = English). |
+| `language` | `tr`, `eu` | Chat and item strings (`tr` / `eu` packs). |
 
 To change crystal names, lore, or message keys, edit **`src/main/resources/lang/tr.yml`** and **`lang/eu.yml`** in the source tree, then rebuild the jar.
 
@@ -88,7 +88,7 @@ gunes_kristali         ay_kristali
 
 ---
 
-## Commands and permissions (English)
+## Commands and permissions
 
 | Command | Description |
 | --- | --- |
@@ -102,20 +102,6 @@ gunes_kristali         ay_kristali
 
 ---
 
-## Komutlar ve izinler (Türkçe)
-
-| Komut | Açıklama |
-| --- | --- |
-| `/kristal` | Kullanımı gösterir (izin gerekir). |
-| `/kristal <kristal_id>` | İlgili kristali verir (örn. `guc_kristali`). |
-| `/kristal random` veya `/kristal rastgele` | Rastgele Kristal verir. |
-
-| İzin | Açıklama | Varsayılan |
-| --- | --- | --- |
-| `xcustomcrystal.admin` | `/kristal` kullanımı | `op` |
-
----
-
 ## License
 
-**Proprietary / özel lisans** — see [`LICENSE`](LICENSE). All rights reserved by xrefunsen; no open-source license is granted.
+**Proprietary license** — see [`LICENSE`](LICENSE). All rights reserved by xrefunsen; no open-source license is granted.
