@@ -1,0 +1,17 @@
+name: xCustomCrystal
+version: 1.2
+main: xrefunsen.xcustomcrystal.XCustomCrystalPlugin
+api-version: '1.21'
+description: Custom crystal items with unique right-click abilities for Paper 1.21—potions, area effects, a craftable random crystal, and admin commands.
+author: xrefunsen
+
+commands:
+  kristal:
+    description: Admin command to receive crystals by id
+    usage: /kristal <crystal_id>
+    permission: xcustomcrystal.admin
+
+permissions:
+  xcustomcrystal.admin:
+    description: Allows /kristal admin commands
+    default: op

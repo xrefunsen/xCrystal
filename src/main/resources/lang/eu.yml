@@ -1,0 +1,213 @@
+messages:
+  only_players: "§cOnly players can use this command."
+  no_permission: "§cYou don't have permission to use this command."
+  cmd_header: "§6=== xCustomCrystal Commands ==="
+  cmd_line_get: "§e/kristal <crystal_id> §7- Get the specified crystal"
+  cmd_example: "§eExample: §7/kristal guc_kristali"
+  random_added: "§dRandom Crystal §7added to your inventory!"
+  invalid_header: "§cInvalid crystal id. Available crystals:"
+  crystal_added: "{display} §7added to your inventory!"
+  random_transform: "§dYour Random Crystal turned into §a{display}§d!"
+  cooldown: "§cYou must wait {seconds} seconds to use this crystal!"
+  lightning_hit: "§eLightning struck a nearby target!"
+  lightning_none: "§eNo valid target found nearby."
+  death_kill: "§8Death Crystal eliminated a target!"
+  death_injure: "§8Death Crystal severely injured its target!"
+  death_no_target: "§8No target found nearby."
+  tp_need_block: "§cYou must target a block to teleport!"
+  tp_unsafe: "§cTeleport destination is not safe!"
+  no_monster: "§cNo monster found to transform."
+  silenced_you: "§8You have been silenced for 5 seconds!"
+  silenced_interact: "§8You are silenced and cannot interact!"
+  silenced_switch: "§8You are silenced and cannot switch items!"
+  silenced_break: "§8You are silenced and cannot break blocks!"
+  silenced_place: "§8You are silenced and cannot place blocks!"
+  silenced_drop: "§8You are silenced and cannot drop items!"
+  moon_night: "§9Moon Crystal only works at night."
+  crystal_used: "{display} §7used!"
+  craft_diamond: "§cEach Diamond Block slot must have at least 12 items!"
+  craft_netherite: "§cEach Netherite Ingot slot must have at least 3 items!"
+  enabled: "xCustomCrystal enabled."
+  disabled: "xCustomCrystal disabled."
+
+item:
+  effects_label: "§7Effects:"
+  cooldown_line: "§7Cooldown: §c{seconds}s"
+  random_crystal_name: "§dRandom Crystal"
+  random_crystal_lore: "§7Right-click to test your luck!"
+
+crystals:
+  ates_kristali:
+    display: "§cFire Crystal"
+    lore:
+      - "§7Contains the pure power of fire."
+    effects:
+      - "§cGrants Fire Resistance for a short time."
+  buz_kristali:
+    display: "§bIce Crystal"
+    lore:
+      - "§7Stuns nearby enemies with freezing cold."
+    effects:
+      - "§bApplies Slowness, Weakness and Mining Fatigue to nearby targets."
+  simsek_kristali:
+    display: "§eLightning Crystal"
+    lore:
+      - "§7Calls down the sky's wrath."
+    effects:
+      - "§eStrikes lightning on a nearby target."
+  yasam_kristali:
+    display: "§aLife Crystal"
+    lore:
+      - "§7Holds nature's life-giving energy."
+    effects:
+      - "§aQuickly heals you and grants absorption."
+  karanlik_kristali:
+    display: "§5Darkness Crystal"
+    lore:
+      - "§7Carries the mystery of shadows."
+    effects:
+      - "§5Grants invisibility and night vision for a short time."
+  guc_kristali:
+    display: "§6Power Crystal"
+    lore:
+      - "§7A reflection of raw strength."
+    effects:
+      - "§6Temporarily increases your attack power."
+  hiz_kristali:
+    display: "§fSpeed Crystal"
+    lore:
+      - "§7Traps the speed of the wind."
+    effects:
+      - "§fGrants Speed and Jump Boost."
+  zirh_kristali:
+    display: "§7Armor Crystal"
+    lore:
+      - "§7A shard of unbreakable will."
+    effects:
+      - "§7Grants temporary damage resistance."
+  zehir_kristali:
+    display: "§2Poison Crystal"
+    lore:
+      - "§7Releases a deadly poison cloud."
+    effects:
+      - "§2Poisons nearby targets."
+  isik_kristali:
+    display: "§eLight Crystal"
+    lore:
+      - "§7Shines with pure light."
+    effects:
+      - "§eApplies Glowing, revealing your position."
+  ruh_kristali:
+    display: "§dSoul Crystal"
+    lore:
+      - "§7An echo from the other side."
+    effects:
+      - "§dGrants invisibility and slow falling."
+  zaman_kristali:
+    display: "§3Time Crystal"
+    lore:
+      - "§7Distorts time around nearby enemies."
+    effects:
+      - "§3Heavily slows nearby targets."
+  doga_kristali:
+    display: "§aNature Crystal"
+    lore:
+      - "§7Gives you the earth's vitality."
+    effects:
+      - "§aGrants regeneration."
+  su_kristali:
+    display: "§9Water Crystal"
+    lore:
+      - "§7Lets you feel the ocean's depths."
+    effects:
+      - "§9Grants water breathing and dolphins grace."
+  toprak_kristali:
+    display: "§6Earth Crystal"
+    lore:
+      - "§7The unshakable power of mountains."
+    effects:
+      - "§6Grants Haste."
+  hava_kristali:
+    display: "§fAir Crystal"
+    lore:
+      - "§7Tastes like the freedom of the sky."
+    effects:
+      - "§fGrants slow falling."
+  kan_kristali:
+    display: "§cBlood Crystal"
+    lore:
+      - "§7Merges the power of battle and life."
+    effects:
+      - "§4Grants Strength and Regeneration."
+  olum_kristali:
+    display: "§8Death Crystal"
+    lore:
+      - "§7Every ending is a beginning."
+    effects:
+      - "§8Has a chance to instantly kill a nearby target."
+  isinlanma_kristali:
+    display: "§dTeleport Crystal"
+    lore:
+      - "§7Tears the veil between places."
+    effects:
+      - "§5Teleports you a short distance in the direction you look."
+  kaos_kristali:
+    display: "§5Chaos Crystal"
+    lore:
+      - "§7Where luck and disorder collide."
+    effects:
+      - "§dApplies a random effect to all nearby entities (including you)."
+  madenci_kristali:
+    display: "§eMiner Crystal"
+    lore:
+      - "§7Reveals treasures hidden underground."
+    effects:
+      - "§6Creates a blast that clears nearby stone."
+  buyucu_kristali:
+    display: "§3Wizard Crystal"
+    lore:
+      - "§7Whispers of ancient magic."
+    effects:
+      - "§bLaunches a magic projectile."
+  yercekimi_kristali:
+    display: "§8Gravity Crystal"
+    lore:
+      - "§7Breaks the rules of gravity."
+    effects:
+      - "§7Launches nearby enemies into the air."
+  ayna_kristali:
+    display: "§fMirror Crystal"
+    lore:
+      - "§7Reflects damage back to the attacker."
+    effects:
+      - "§fReflects part of incoming damage for a short time."
+  hazine_kristali:
+    display: "§eTreasure Crystal"
+    lore:
+      - "§7Bends fate in your favor."
+    effects:
+      - "§6Grants Luck temporarily."
+  metamorfoz_kristali:
+    display: "§dMetamorphosis Crystal"
+    lore:
+      - "§7Changes the form of matter."
+    effects:
+      - "§5Transforms a nearby monster into a random passive animal."
+  sessizlik_kristali:
+    display: "§8Silence Crystal"
+    lore:
+      - "§7Creates a void that swallows sound."
+    effects:
+      - "§7Prevents nearby players from interacting for a short time."
+  gunes_kristali:
+    display: "§eSun Crystal"
+    lore:
+      - "§7Radiates the sun's purifying light."
+    effects:
+      - "§eBurns nearby targets."
+  ay_kristali:
+    display: "§9Moon Crystal"
+    lore:
+      - "§7Holds the mysterious power of the night."
+    effects:
+      - "§9Only works at night."

@@ -1,0 +1,213 @@
+messages:
+  only_players: "§cBu komutu yalnızca oyuncular kullanabilir."
+  no_permission: "§cBu komutu kullanma iznin yok."
+  cmd_header: "§6=== xCustomCrystal Komutları ==="
+  cmd_line_get: "§e/kristal <kristal_id> §7- Belirtilen kristali al"
+  cmd_example: "§eÖrnek: §7/kristal guc_kristali"
+  random_added: "§dRastgele Kristal §7envanterine eklendi!"
+  invalid_header: "§cGeçersiz kristal id. Mevcut kristaller:"
+  crystal_added: "{display} §7envanterine eklendi!"
+  random_transform: "§dRastgele Kristalin §a{display} §doldu!"
+  cooldown: "§cBu kristali tekrar kullanmak için {seconds} saniye beklemelisin!"
+  lightning_hit: "§eYakındaki bir hedefe yıldırım düştü!"
+  lightning_none: "§eYakında geçerli bir hedef yok."
+  death_kill: "§8Ölüm Kristali bir hedefi yok etti!"
+  death_injure: "§8Ölüm Kristali hedefi ağır yaraladı!"
+  death_no_target: "§8Yakında hedef yok."
+  tp_need_block: "§cIşınlanmak için bir bloğa bakmalısın!"
+  tp_unsafe: "§cIşınlanma noktası güvenli değil!"
+  no_monster: "§cDönüştürülecek canavar bulunamadı."
+  silenced_you: "§85 saniye boyunca susturuldun!"
+  silenced_interact: "§8Susturuldun, etkileşim kuramazsın!"
+  silenced_switch: "§8Susturuldun, eşya değiştiremezsin!"
+  silenced_break: "§8Susturuldun, blok kıramazsın!"
+  silenced_place: "§8Susturuldun, blok yerleştiremezsin!"
+  silenced_drop: "§8Susturuldun, eşya atamazsın!"
+  moon_night: "§9Ay Kristali yalnızca gece çalışır."
+  crystal_used: "{display} §7kullanıldı!"
+  craft_diamond: "§cHer Elmas Blok yuvasında en az 12 eşya olmalı!"
+  craft_netherite: "§cHer Netherite Külçe yuvasında en az 3 eşya olmalı!"
+  enabled: "xCustomCrystal etkin."
+  disabled: "xCustomCrystal devre dışı."
+
+item:
+  effects_label: "§7Etkiler:"
+  cooldown_line: "§7Bekleme: §c{seconds} sn"
+  random_crystal_name: "§dRastgele Kristal"
+  random_crystal_lore: "§7Şansını dene — sağ tıkla!"
+
+crystals:
+  ates_kristali:
+    display: "§cAteş Kristali"
+    lore:
+      - "§7Saf ateş gücünü taşır."
+    effects:
+      - "§cKısa süreli Ateş Direnci verir."
+  buz_kristali:
+    display: "§bBuz Kristali"
+    lore:
+      - "§7Yakındaki düşmanları dondurur."
+    effects:
+      - "§bYakındaki hedeflere Yavaşlık, Zayıflık ve Kazma Yorgunluğu uygular."
+  simsek_kristali:
+    display: "§eŞimşek Kristali"
+    lore:
+      - "§7Gökyüzünün öfkesini çağırır."
+    effects:
+      - "§eYakındaki bir hedefe yıldırım indirir."
+  yasam_kristali:
+    display: "§aYaşam Kristali"
+    lore:
+      - "§7Doğanın yaşam enerjisini saklar."
+    effects:
+      - "§aSeni hızla iyileştirir ve emilim verir."
+  karanlik_kristali:
+    display: "§5Karanlık Kristali"
+    lore:
+      - "§7Gölgelerin gizemini taşır."
+    effects:
+      - "§5Kısa süreli görünmezlik ve gece görüşü verir."
+  guc_kristali:
+    display: "§6Güç Kristali"
+    lore:
+      - "§7Ham gücün yansıması."
+    effects:
+      - "§6Saldırı gücünü geçici olarak artırır."
+  hiz_kristali:
+    display: "§fHız Kristali"
+    lore:
+      - "§7Rüzgârın hızını hapseder."
+    effects:
+      - "§fHız ve Zıplama Güçlendirmesi verir."
+  zirh_kristali:
+    display: "§7Zırh Kristali"
+    lore:
+      - "§7Kırılmaz iradenin parçası."
+    effects:
+      - "§7Geçici hasar direnci verir."
+  zehir_kristali:
+    display: "§2Zehir Kristali"
+    lore:
+      - "§7Ölümcül bir zehir bulutu salar."
+    effects:
+      - "§2Yakındaki hedefleri zehirler."
+  isik_kristali:
+    display: "§eIşık Kristali"
+    lore:
+      - "§7Saf ışıkla parlar."
+    effects:
+      - "§eParlama verir, konumunu belli eder."
+  ruh_kristali:
+    display: "§dRuh Kristali"
+    lore:
+      - "§7Öte alemden bir yankı."
+    effects:
+      - "§dGörünmezlik ve yavaş düşüş verir."
+  zaman_kristali:
+    display: "§3Zaman Kristali"
+    lore:
+      - "§7Yakındaki düşmanların etrafında zamanı büker."
+    effects:
+      - "§3Yakındaki hedefleri ağır şekilde yavaşlatır."
+  doga_kristali:
+    display: "§aDoğa Kristali"
+    lore:
+      - "§7Toprağın canlılığını verir."
+    effects:
+      - "§aYenilenme verir."
+  su_kristali:
+    display: "§9Su Kristali"
+    lore:
+      - "§7Okyanusun derinliğini hissettirir."
+    effects:
+      - "§9Su altında nefes ve yunus zarafeti verir."
+  toprak_kristali:
+    display: "§6Toprak Kristali"
+    lore:
+      - "§7Dağların sarsılmaz gücü."
+    effects:
+      - "§6Acele verir."
+  hava_kristali:
+    display: "§fHava Kristali"
+    lore:
+      - "§7Gökyüzü özgürlüğünün tadı."
+    effects:
+      - "§fYavaş düşüş verir."
+  kan_kristali:
+    display: "§cKan Kristali"
+    lore:
+      - "§7Savaş ve yaşam gücünü birleştirir."
+    effects:
+      - "§4Güç ve Yenilenme verir."
+  olum_kristali:
+    display: "§8Ölüm Kristali"
+    lore:
+      - "§7Her son bir başlangıçtır."
+    effects:
+      - "§8Yakındaki bir hedefi anında öldürme şansı taşır."
+  isinlanma_kristali:
+    display: "§dIşınlanma Kristali"
+    lore:
+      - "§7Mekânlar arasındaki perdeyi yırtar."
+    effects:
+      - "§5Baktığın yönde kısa mesafe ışınlanmanı sağlar."
+  kaos_kristali:
+    display: "§5Kaos Kristali"
+    lore:
+      - "§7Şans ve düzensizliğin buluştuğu yer."
+    effects:
+      - "§dYakındaki tüm varlıklara (sana da) rastgele etki uygular."
+  madenci_kristali:
+    display: "§eMadenci Kristali"
+    lore:
+      - "§7Yeraltındaki hazineleri ortaya çıkarır."
+    effects:
+      - "§6Yakındaki taşı patlatıp temizler."
+  buyucu_kristali:
+    display: "§3Büyücü Kristali"
+    lore:
+      - "§7Kadim büyünün fısıltıları."
+    effects:
+      - "§bBüyülü bir mermi fırlatır."
+  yercekimi_kristali:
+    display: "§8Yerçekimi Kristali"
+    lore:
+      - "§7Yerçekimi kurallarını bozar."
+    effects:
+      - "§7Yakındaki düşmanları havaya fırlatır."
+  ayna_kristali:
+    display: "§fAyna Kristali"
+    lore:
+      - "§7Hasarı saldırgana yansıtır."
+    effects:
+      - "§fGelen hasarın bir kısmını kısa süre yansıtır."
+  hazine_kristali:
+    display: "§eHazine Kristali"
+    lore:
+      - "§7Kaderi lehine çeker."
+    effects:
+      - "§6Geçici Şans verir."
+  metamorfoz_kristali:
+    display: "§dMetamorfoz Kristali"
+    lore:
+      - "§7Maddenin biçimini değiştirir."
+    effects:
+      - "§5Yakındaki bir canavarı rastgele pasif bir hayvana dönüştürür."
+  sessizlik_kristali:
+    display: "§8Sessizlik Kristali"
+    lore:
+      - "§7Sesi yutan bir boşluk yaratır."
+    effects:
+      - "§7Yakındaki oyuncuların kısa süre etkileşimini engeller."
+  gunes_kristali:
+    display: "§eGüneş Kristali"
+    lore:
+      - "§7Güneşin arındırıcı ışığını yayar."
+    effects:
+      - "§eYakındaki hedefleri yakar."
+  ay_kristali:
+    display: "§9Ay Kristali"
+    lore:
+      - "§7Gecenin gizemli gücünü taşır."
+    effects:
+      - "§9Yalnızca gece çalışır."
