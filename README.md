@@ -1,16 +1,27 @@
 # xCustomCrystal
 
-**xCustomCrystal** is a Paper **1.21** plugin by **xrefunsen** that adds craftable and command-givable **Echo Shard** items (“crystals”). Each crystal has a stable id, colored name and lore, a **30 second** cooldown per player per crystal type, and a **right-click** ability: self buffs, area debuffs, lightning, short teleport, silence aura, mirror damage reflection, miner blast, fireball, mob morph, and more. Messages and item text load from **`lang/tr.yml`** or **`lang/eu.yml`**, selected with **`language`** in **`config.yml`**.
+![Paper](https://img.shields.io/badge/Paper-1.21-004080?style=flat)
+![Java](https://img.shields.io/badge/Java-17+-e58916?style=flat)
 
-**Random Crystal** is a separate **Nether Star** item: right-click consumes it and grants one random normal crystal. Crystals store their id in **PersistentDataContainer** (`crystal_id`); the random item uses `is_random_crystal`.
+**xCustomCrystal** is a **Paper 1.21** plugin by **[xrefunsen](https://github.com/xrefunsen)**. It adds **Echo Shard** “crystal” items you can **craft** or **give with commands**. Each crystal has a fixed **id**, styled **name/lore**, a **30s cooldown** per player per type, and a **right-click** power (buffs, AoE debuffs, lightning, teleport, silence, mirror reflect, mining burst, fireball, mob morph, and more).
+
+**In-game language** comes from **`lang/tr.yml`** or **`lang/eu.yml`** (English UI strings), chosen with **`language`** in **`plugins/xCustomCrystal/config.yml`**.
+
+**Random Crystal** is crafted as a **Nether Star** item: **right-click** consumes it and rolls **one** random crystal from all registered ids. Item data uses **`crystal_id`** on normal crystals and **`is_random_crystal`** on the random item (Paper **PersistentDataContainer**).
+
+**Repository:** [github.com/xrefunsen/xCrystal](https://github.com/xrefunsen/xCrystal) · **Main class:** `xrefunsen.xcustomcrystal.XCustomCrystalPlugin`
+
+---
+
+**İçindekiler:** aşağıda tam İngilizce dokümantasyon; sayfa sonuna doğru **Türkçe** özet bölümü vardır.
 
 ---
 
 ## Requirements
 
-- Java **17+**
+- **Java 17+**
 - **Paper** 1.21 (or a compatible fork)
-- **Maven** 3.6+ if you build from source
+- **Maven** 3.6+ to build from this repo
 
 ## Build
 
@@ -18,40 +29,42 @@
 mvn -B package
 ```
 
-Output: **`target/xCustomCrystal.jar`**
+Artifact: **`target/xCustomCrystal.jar`**
 
 ## Installation
 
-1. Run `mvn -B package` or use a prebuilt jar.
-2. Copy **`xCustomCrystal.jar`** into the server **`plugins`** folder.
-3. Start the server once.
-4. Edit **`plugins/xCustomCrystal/config.yml`** and set **`language`** to **`tr`** or **`eu`**.
-5. Restart the server (or reload plugins if your setup supports it safely).
+1. Build with Maven or use a released jar.
+2. Put **`xCustomCrystal.jar`** in the server **`plugins`** folder.
+3. Start the server once to create **`plugins/xCustomCrystal/`**.
+4. Set **`language`** to **`tr`** or **`eu`** in **`config.yml`** (`eu` = English messages).
+5. Restart the server (or reload only if you know it is safe for your setup).
 
 ## Configuration
 
 | Key | Values | Description |
 | --- | --- | --- |
-| `language` | `tr`, `eu` | Chat and item strings (`tr` / `eu` packs). |
+| `language` | `tr`, `eu` | Which YAML pack loads for chat and item text. |
 
-To change crystal names, lore, or message keys, edit **`src/main/resources/lang/tr.yml`** and **`lang/eu.yml`** in the source tree, then rebuild the jar.
+Edit **`src/main/resources/lang/tr.yml`** / **`lang/eu.yml`** in source, then rebuild, to change names, lore, or message keys.
 
 ---
 
 ## Features (summary)
 
-- **29** crystal types with distinct effects (potions, particles, sounds, area targeting).
-- **Per-crystal cooldown** tracked per player.
-- **Silence crystal** temporarily blocks other players’ item swap, block break/place, drop, and some interactions.
-- **Mirror crystal** reflects part of incoming damage for a short window.
-- **Moon crystal** only applies its buffs at **night** (world time roughly 13000–23000).
-- **Admin command** `/kristal` to give crystals or a Random Crystal (permission-gated).
+| Topic | Detail |
+| --- | --- |
+| Crystals | **29** types, each with unique right-click behaviour. |
+| Cooldown | Per **player** + **crystal id** (default **30s** in definitions). |
+| Silence | Blocks hotbar swap, break/place, drops, and some use actions on affected players. |
+| Mirror | Reflects **50%** of damage back to the attacker for a short timer. |
+| Moon | Buffs only during **night** (world time ~**13000–23000**). |
+| Admin | **`/kristal`** gives any crystal or a Random Crystal (**permission** required). |
 
 ---
 
 ## Random Crystal crafting (shaped)
 
-Recipe id in code: **`random_crystal`**. Grid is **3×3**; letters below match the code shape string (**`NEN` / `EWE` / `NEN`**).
+Internal recipe key: **`random_crystal`**. Shape in code: **`NEN`** / **`EWE`** / **`NEN`**.
 
 ```
 [N] [E] [N]
@@ -59,15 +72,13 @@ Recipe id in code: **`random_crystal`**. Grid is **3×3**; letters below match t
 [N] [E] [N]
 ```
 
-| Letter | Material |
+| Symbol | Item |
 | --- | --- |
 | **N** | Netherite Ingot |
 | **E** | Diamond Block |
-| **W** | Nether Star (center) |
+| **W** | Nether Star (middle) |
 
-**Stack rules (enforced by the plugin):** before the craft succeeds, every **E** slot must hold **at least 12** Diamond Blocks (per slot), and every **N** slot **at least 3** Netherite Ingots. After a successful craft, the plugin removes **11** from each **E** stack and **2** from each **N** stack (one tick later), so the real cost per craft is **44 Diamond Blocks** and **8 Netherite Ingots** plus **1 Nether Star**.
-
-Right-click the crafted **Random Crystal** to turn it into one random normal crystal (uniform pick among registered ids).
+**Why stacks look huge:** before the craft is allowed, every **E** cell needs **≥ 12** Diamond Blocks and every **N** cell **≥ 3** Netherite Ingots. After success, the plugin (next tick) removes **11** from each **E** stack and **2** from each **N** stack — real cost **44** Diamond Blocks, **8** Netherite Ingots, **1** Nether Star.
 
 ---
 
@@ -92,16 +103,60 @@ gunes_kristali         ay_kristali
 
 | Command | Description |
 | --- | --- |
-| `/kristal` | Prints usage (needs permission). |
-| `/kristal <crystal_id>` | Gives that crystal (e.g. `guc_kristali`). |
-| `/kristal random` or `/kristal rastgele` | Gives a Random Crystal. |
+| `/kristal` | Show usage (**permission** required). |
+| `/kristal <crystal_id>` | Give that crystal (example: `guc_kristali`). |
+| `/kristal random` | Give a **Random Crystal** (alias: `/kristal rastgele`). |
 
 | Permission | Description | Default |
 | --- | --- | --- |
-| `xcustomcrystal.admin` | Use `/kristal` | `op` |
+| `xcustomcrystal.admin` | Use **`/kristal`** | `op` |
+
+---
+
+## Türkçe
+
+**xCustomCrystal**, **xrefunsen**’ın **Paper 1.21** için geliştirdiği bir eklentidir. **Yankı Parçası** görünümlü **kristal** eşyaları ekler; bunlar **üretim masasında** yapılabilir veya **`/kristal`** ile verilebilir. Her kristalin sabit **id**’si, renkli **isim/lore**’u, oyuncu + kristal türü başına **30 saniye** bekleme süresi ve **sağ tık** ile çalışan özel bir gücü vardır (iksirler, alan etkileri, yıldırım, ışınlanma, sessizlik, ayna, madenci patlaması, ateş topu, canavar dönüşümü vb.).
+
+**Oyun içi metinler** **`config.yml`** içindeki **`language`** ile **`tr`** veya **`eu`** (İngilizce arayüz metinleri) seçilir; dosyalar **`lang/tr.yml`** ve **`lang/eu.yml`**.
+
+**Rastgele Kristal** ayrı bir **Nether Yıldızı** eşyasıdır; **sağ tık** ile tüketilir ve kayıtlı kristallerden **biri** rastgele verilir.
+
+### Gereksinimler
+
+Java **17+**, **Paper 1.21**, kaynak derlemek için **Maven 3.6+**.
+
+### Derleme ve kurulum
+
+```bash
+mvn -B package
+```
+
+1. **`target/xCustomCrystal.jar`** dosyasını sunucunun **`plugins`** klasörüne atın.  
+2. Sunucuyu bir kez çalıştırın, **`plugins/xCustomCrystal/config.yml`** içinde **`language`** değerini **`tr`** veya **`eu`** yapın.  
+3. Sunucuyu yeniden başlatın.
+
+### Rastgele Kristal (üretim özeti)
+
+Aynı **3×3** şema: köşeler ve orta yanlar **N** = Netherite Külçe, kenar ortalar **E** = Elmas Blok, merkez **W** = Nether Yıldızı. Her **E** hücrede en az **12**, her **N** hücrede en az **3** eşya gerekir; başarılı üretimde gerçek maliyet yaklaşık **44 Elmas Blok**, **8 Netherite Külçe**, **1 Nether Yıldızı** (detay yukarıdaki İngilizce tabloda).
+
+### Komutlar ve izinler
+
+| Komut | Açıklama |
+| --- | --- |
+| `/kristal` | Kullanımı gösterir (izin gerekir). |
+| `/kristal <kristal_id>` | Belirtilen kristali verir (örn. `guc_kristali`). |
+| `/kristal random` veya `/kristal rastgele` | Rastgele Kristal verir. |
+
+| İzin | Açıklama | Varsayılan |
+| --- | --- | --- |
+| `xcustomcrystal.admin` | `/kristal` kullanımı | `op` |
+
+**Kristal id listesi** yukarıdaki İngilizce bölümdeki blok ile aynıdır.
 
 ---
 
 ## License
 
-**Proprietary license** — see [`LICENSE`](LICENSE). All rights reserved by xrefunsen; no open-source license is granted.
+**English:** Proprietary — see [`LICENSE`](LICENSE). All rights reserved by xrefunsen; no open-source license is granted.
+
+**Türkçe:** Özel lisans — ayrıntı için [`LICENSE`](LICENSE). Tüm hakları xrefunsen’a aittir; açık kaynak lisansı verilmez.
